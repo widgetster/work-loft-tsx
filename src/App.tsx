@@ -6,6 +6,7 @@ import { ThirdBlock } from './components/body/ThirdBlock'
 import { FourthBlock } from './components/body/FourthBlock'
 import { FifthBlock } from './components/body/FifthBlock'
 import { SixthBlock } from './components/body/SixthBlock'
+import { SeventhBlock } from './components/body/SeventhBlock'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <FourthBlock />
         <FifthBlock />
         <SixthBlock />
+        <SeventhBlock />
       </main>
     </>
 
