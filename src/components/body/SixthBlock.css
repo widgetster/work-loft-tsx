@@ -1,0 +1,118 @@
+.sixth-block-container{
+    /* padding: 0 200px; */
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+}
+
+.sixth-block-bg{
+    padding: 25px 200px;
+    background-color: rgba(0, 105, 59, 0.1);
+}
+
+.flexible-plans-p{
+    color: orange;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.plans-for-p{
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(0, 105, 59);
+    text-align: center;
+    margin: 2px 0 15px 0;
+}
+
+.all-plan-container{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.plan-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    padding: 25px 20px 10px 20px;
+}
+
+.monthly-plan-container{
+    position: relative;
+
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid orange;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    padding: 25px 20px 10px 20px;
+}
+
+.plan-name-p{
+    font-family: Poppins;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.price-p{
+    /* color: white; */
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.unit-price-s{
+    color: rgb(0, 105, 59);
+    font-size: 12px;
+}
+
+.plan-description-p{
+    font-size: 13px;
+    color: rgb(0, 105, 59);
+    width: 200px;
+    letter-spacing: 0.2px;
+    padding-top: 4px;
+    padding-bottom: 10px;
+}
+
+.plan-container div,
+.monthly-plan-container div{
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.buy-buttons{
+    border: 1px solid rgb(0, 105, 59);
+    border-radius: 8px;
+    color: rgb(0, 105, 59);
+    font-weight: bold;
+    font-size: 10px;
+    cursor: pointer;
+    padding: 8px 80px;
+    margin: 15px 0;
+}
+
+.buy-buttons:hover{
+    background-color: rgba(0, 105, 59, 0.2);
+    transition: background-color 0.25s;
+}
+
+.most-popular-container{
+    position: absolute;
+    top: 0;
+    left: 85px;    
+
+    font-size: 8px;
+    padding: 2px 9px;
+    border: none;
+    background-color: orange;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+}
+
+
