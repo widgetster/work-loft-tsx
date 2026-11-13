@@ -1,0 +1,66 @@
+header{
+    font-family: Poppins;
+}
+
+.header-container{
+    /* padding: 0 200px; */
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+}
+
+.header-bg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 105, 59, 0.1);
+    border-radius:10px 10px 0 0;
+    padding: 15px 100px;
+}
+
+.header-logo-img{
+    height: 50px;
+    padding-right: 10px;
+}
+
+.header-workloft-p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-left-container{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-middle-container{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.header-middle-container div p{
+    border-bottom: 2px solid rgba(0, 105, 59, 0);
+    transition: border-bottom-color 0.25s;
+}
+
+.header-middle-container div p:hover{
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0, 105, 59, 1);
+    transition: border-bottom-color 0.25s;
+}
+
+.book-a-tour-button{
+    border: none;
+    background-color: rgb(0, 105, 59);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.book-a-tour-button:hover{
+    background-color: rgb(0, 105, 59, 0.8);
+    cursor: pointer;
+}
