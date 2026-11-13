@@ -1,0 +1,26 @@
+.second-block-container{
+    /* padding: 0 200px; */
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+}
+
+.second-block-bg{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+
+    padding: 20px 0 20px 200px;
+}
+
+.trusted-by-p{
+    font-family: Poppins;
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    color: rgb(0, 105, 59);
+    /* padding-bottom: 5px; */
+}
+
+.different-company-img{
+    height: 40px;
+}
