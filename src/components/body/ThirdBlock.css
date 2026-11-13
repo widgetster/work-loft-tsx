@@ -1,0 +1,44 @@
+.third-block-container{
+    /* padding: 0 200px; */
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+}
+
+.third-block-bg{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: rgba(0, 105, 59, 0.1);
+    padding: 15px 200px   
+}
+
+.third-block-bg .benefits-container{
+    display: flex;
+    align-items: center;
+
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.15);
+    padding: 0 50px 0 0;
+}
+
+.benefit-img{
+    height: 85px;
+    margin-right: -20px;
+    margin-left: -10px;
+}
+
+.benefit-name-p{
+    font-family: Poppins;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.benefit-description-p{
+    width: 210px;
+    font-size: 12px;
+    padding-top: 5px;
+}
