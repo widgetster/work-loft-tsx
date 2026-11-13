@@ -7,6 +7,7 @@ import { FourthBlock } from './components/body/FourthBlock'
 import { FifthBlock } from './components/body/FifthBlock'
 import { SixthBlock } from './components/body/SixthBlock'
 import { SeventhBlock } from './components/body/SeventhBlock'
+import { Footer } from './components/Footer'
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <SixthBlock />
         <SeventhBlock />
       </main>
+
+      <Footer />
     </>
 
   )
