@@ -1,0 +1,101 @@
+.fifth-block-container{
+    /* padding: 0 200px; */
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+}
+
+.fifth-block-bg{
+    display: flex;
+    align-items: center;
+
+    padding: 0 200px;
+    background-color: rgba(0, 105, 59, 0.1);
+}
+
+.fifth-block-left-container{
+    display: flex;
+
+}
+
+.fifth-block-left-container div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.space2-img{
+    height: 350px;
+    width:  320px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.space3-img{
+    height: 170px;
+    width:  280px;
+    /* object-fit: fill; */
+    border-radius: 8px;
+}
+
+.designed-for-p{
+    color: orange;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding-bottom: 10px;
+}
+
+.more-than-p{
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(0, 105, 59);
+}
+
+.workloft-spaces-p{
+    font-size: 13px;
+    color: rgb(0, 105, 59);
+    width: 370px;
+    letter-spacing: 0.2px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.fifth-block-right-container{
+    padding-left: 60px;
+}
+
+.fifth-block-right-container div{
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.check-img{
+    height: 20px;
+    padding-right: 7px;
+}
+
+.fifth-block-benefit-p{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+.explore-locations-buttons{
+    border: 1px solid rgb(0, 105, 59);
+    border-radius: 8px;
+    padding: 12px 33px;
+    color: rgb(0, 105, 59);
+    font-weight: bold;
+    font-size: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.explore-locations-buttons:hover{
+    background-color: rgba(0, 105, 59, 0.1);
+    transition: background-color 0.25s;
+}
