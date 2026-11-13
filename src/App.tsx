@@ -1,5 +1,6 @@
 import './App.css'
 import { Header } from './components/Header'
+import { FirstBlock } from './components/body/FirstBlock'
 
 function App() {
 
@@ -7,6 +8,10 @@ function App() {
 
     <>
       <Header />
+
+      <main>
+        <FirstBlock />
+      </main>
     </>
 
   )
