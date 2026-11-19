@@ -1,13 +1,10 @@
 import './App.css'
-import { Header } from './components/Header'
-import { FirstBlock } from './components/body/FirstBlock'
-import { SecondBlock } from './components/body/SecondBlock'
-import { ThirdBlock } from './components/body/ThirdBlock'
-import { FourthBlock } from './components/body/FourthBlock'
-import { FifthBlock } from './components/body/FifthBlock'
-import { SixthBlock } from './components/body/SixthBlock'
-import { SeventhBlock } from './components/body/SeventhBlock'
-import { Footer } from './components/Footer'
+import { Home } from './components/Home'
+import { Route, Routes } from 'react-router'
+import { Spaces } from './Spaces'
+import { Memberships } from './Memberships'
+import { Locations } from './Locations'
+import { Resources } from './Resources'
 
 
 function App() {
@@ -15,19 +12,16 @@ function App() {
   return (
 
     <>
-      <Header />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="spaces" element={<Spaces />} />
+        <Route path="memberships" element={<Memberships />} />
+        <Route path="locations" element={<Locations />} />
+        <Route path="resources" element={<Resources />} />
 
-      <main>
-        <FirstBlock />
-        <SecondBlock />
-        <ThirdBlock />
-        <FourthBlock />
-        <FifthBlock />
-        <SixthBlock />
-        <SeventhBlock />
-      </main>
 
-      <Footer />
+      </Routes>
+
     </>
 
   )
