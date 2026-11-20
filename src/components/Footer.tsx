@@ -1,5 +1,6 @@
 import './Footer.css'
 
+const iconPath = `${import.meta.env.BASE_URL}icon/`
 
 export function Footer() {
 
@@ -8,17 +9,17 @@ export function Footer() {
       <div className="footer-bg">
         <div>
           <div className="footer-logo-name-container">
-            <img className="logo-footer-img" src="icon/logo.png" />
+            <img className="logo-footer-img" src={`${iconPath}logo.png`} alt="" />
             <p className="footer-workhub-p">WorkHub</p>
           </div>
 
           <p className="modern-coworking-p">Modern coworking spaces that help you do your best work.</p>
 
           <div className="soc-med-container">
-            <img className="soc-med-img" src="icon/facebook.png" />
-            <img className="soc-med-img" src="icon/linkedin.png" />
-            <img className="soc-med-img" src="icon/instagram.png" />
-            <img className="soc-med-img" src="icon/twitter.png" />
+            <img className="soc-med-img" src={`${iconPath}facebook.png`} alt="Facebook" />
+            <img className="soc-med-img" src={`${iconPath}linkedin.png`} alt="LinkedIn" />
+            <img className="soc-med-img" src={`${iconPath}instagram.png`} alt="Instagram" />
+            <img className="soc-med-img" src={`${iconPath}twitter.png`} alt="Twitter" />
           </div>
 
           <p className="footer-copyright-p">&copy; 2026 WorkLoft. All rights reserved.</p>
