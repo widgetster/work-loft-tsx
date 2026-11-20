@@ -18,6 +18,11 @@ header{
     padding: 15px 100px;
 }
 
+.header-bg a{
+    color: inherit;
+    text-decoration: none;
+}
+
 .header-logo-img{
     height: 50px;
     padding-right: 10px;
@@ -33,6 +38,8 @@ header{
     align-items: center;
     cursor: pointer;
 }
+
+
 
 .header-middle-container{
     display: flex;
