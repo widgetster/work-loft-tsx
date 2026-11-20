@@ -8,11 +8,11 @@ export function FirstBlock() {
       <div className="first-block-bg">
         <div className="first-block-left-container">
           <p className="work-better-p">WORK BETTER, TOGETHER</p>
-          <p className="find-your-p">Find Your Next Workspace</p>
-          <p className="modern-coworking-p">Modern coworking spaces designed for productivity, creativity, and connection. Book by the day or join as a member.</p>
+          <h1 className="find-your-p">Find Your Next Workspace</h1>
+          <p className="first-block-description">Modern coworking spaces designed for productivity, creativity, and connection. Book by the day or join as a member.</p>
 
           <div className="first-block-left-fourth-row-container">
-            <input type="text" className="search-by-input" placeholder="Search by location or city" />
+            <input type="text" className="search-by-input" aria-label="Search by location or city" placeholder="Search by location or city" />
             <button className="find-a-space-button">Find a Space</button>
           </div>
 
@@ -41,7 +41,7 @@ export function FirstBlock() {
         </div>
 
         <div className="first-block-right-container">
-          <img className="first-block-right-space-img" src="picture/space1.jpg" />
+          <img className="first-block-right-space-img" src="picture/space1.jpg" alt="Coworking space with shared tables and lounge seating" />
 
           <div className="first-block-right-reviews-container">
             <div>

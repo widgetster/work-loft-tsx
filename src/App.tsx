@@ -36,8 +36,8 @@ function App() {
 
   return (
     <Routes>
-      <Route index element={<Home />} />
       <Route element={<SiteLayout />}>
+        <Route index element={<Home />} />
         <Route path="spaces" element={<Spaces />} />
         <Route path="memberships" element={<Memberships />} />
         <Route path="locations" element={<Locations />} />

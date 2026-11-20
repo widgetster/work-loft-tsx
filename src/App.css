@@ -4,10 +4,9 @@
   --brand-tint: rgb(0 105 59 / 10%);
   --brand-border: rgb(0 105 59 / 16%);
   --brand-orange: #ffa500;
+  --brand-orange-text: #874900;
   --site-ink: #20362c;
   --site-muted: #496255;
-  --site-width: 1500px;
-  --site-gutter: clamp(1rem, calc((100% - 69rem) / 2), 12.5rem);
   --heading-font: Poppins, Inter, sans-serif;
 }
 
@@ -22,31 +21,43 @@ body {
 }
 
 .site-layout {
+  --content-width: clamp(80rem, 76vw, 120rem);
+  --content-gutter: max(clamp(1rem, 5vw, 4rem), calc((100% - var(--content-width)) / 2));
+  --section-padding: clamp(2.5rem, 5vw, 6rem);
+  --section-gap: clamp(0.875rem, 2vw, 2rem);
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.site-layout > main {
-  flex: 1;
+.site-layout > :is(.header-container, .footer-container) {
+  max-width: none;
+  margin: 0;
+}
+
+.site-layout > .footer-container {
+  flex-grow: 1;
+  background: var(--brand-tint);
 }
 
 .site-layout .header-bg {
   gap: 0.75rem 1rem;
-  padding-inline: clamp(1rem, 6.67%, 6.25rem);
+  padding: clamp(0.875rem, 1vw, 1.5rem) var(--content-gutter);
+  border-radius: 0;
 }
 
 .site-layout .header-middle-container {
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0 clamp(0.75rem, 3vw, 2rem);
+  gap: 0 clamp(0.5rem, 2.25vw, 3rem);
   width: auto;
 }
 
 .site-layout .header-middle-container a {
   padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 0.75rem + 0.15vw, 1.0625rem);
 }
 
 .site-layout .header-middle-container a:hover,
@@ -57,17 +68,29 @@ body {
 
 .site-layout .book-a-tour-button {
   flex-shrink: 0;
+  font-size: clamp(0.875rem, 0.75rem + 0.15vw, 1rem);
 }
 
 .site-layout .footer-bg {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr));
-  gap: 1rem;
-  padding: 1.5rem var(--site-gutter);
+  grid-template-columns: minmax(0, 1.4fr) repeat(4, minmax(0, 1fr)) minmax(0, 1.6fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: clamp(1.5rem, 3vw, 3rem) var(--content-gutter);
+  background: none;
+}
+
+.site-layout .logo-footer-img {
+  height: clamp(2rem, 2.5vw, 3.125rem);
+  padding-right: 0.5rem;
 }
 
 .site-layout .footer-bg .modern-coworking-p {
-  width: auto;
+  width: min(100%, 30ch);
+}
+
+.site-layout .footer-bg :is(.modern-coworking-p, .footer-title-link-p, .footer-link-p, .footer-get-updates-p, .footer-events-and-p) {
+  font-size: clamp(0.8125rem, 0.7rem + 0.15vw, 1rem);
+  line-height: 1.5;
 }
 
 .site-layout .footer-enter-email {
@@ -76,10 +99,16 @@ body {
   margin: 0 0 0.5rem;
 }
 
+@media (max-width: 64rem) {
+  .site-layout .footer-bg {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 48rem) {
   .site-layout .header-bg {
     flex-wrap: wrap;
-    padding: 0.625rem 1rem;
+    padding-block: 0.625rem;
   }
 
   .site-layout .header-logo-img {
@@ -90,6 +119,16 @@ body {
     order: 1;
     width: 100%;
     border-top: 1px solid var(--brand-border);
+  }
+}
+
+@media (max-width: 36rem) {
+  .site-layout .footer-bg {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-layout .footer-bg > :is(:first-child, :last-child) {
+    grid-column: 1 / -1;
   }
 }
 
@@ -120,29 +159,29 @@ body {
 }
 
 .route-page {
-  max-width: var(--site-width);
-  margin-inline: auto;
   color: var(--site-ink);
+  font-size: clamp(1rem, 0.875rem + 0.2vw, 1.25rem);
   line-height: 1.6;
 }
 
 .page-hero,
 .page-section {
-  padding: clamp(2.5rem, 5vw, 4.5rem) var(--site-gutter);
+  padding: var(--section-padding) var(--content-gutter);
 }
 
 .page-hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
-  gap: clamp(1.5rem, 4vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 6rem);
   border-top: 1px solid var(--brand-border);
   background: var(--brand-tint);
 }
 
 .page-hero-centered {
-  grid-template-columns: minmax(0, 42rem);
+  grid-template-columns: minmax(0, 54rem);
   justify-content: center;
+  justify-items: center;
   text-align: center;
 }
 
@@ -156,8 +195,9 @@ body {
 
 .page-hero h1 {
   margin: 0 0 1rem;
-  font-size: clamp(2.25rem, 4vw, 3.375rem);
+  font-size: clamp(2.25rem, 1.5rem + 1.9vw, 4.5rem);
   font-weight: 700;
+  text-wrap: balance;
 }
 
 .page-hero h1::before {
@@ -179,6 +219,14 @@ body {
   color: var(--site-muted);
 }
 
+.page-hero p {
+  max-width: 55ch;
+}
+
+.page-hero-centered p {
+  margin-inline: auto;
+}
+
 .page-hero .site-button {
   margin-top: 1.25rem;
 }
@@ -192,12 +240,13 @@ body {
 
 .page-hero-photo {
   aspect-ratio: 3 / 2;
+  max-height: 36rem;
   border-radius: 10px;
 }
 
 .page-section h2 {
   margin: 0 0 0.875rem;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 1.125rem + 1vw, 2.75rem);
 }
 
 .page-section > p {
@@ -216,7 +265,7 @@ body {
 .page-card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(0.875rem, 2vw, 1.5rem);
+  gap: var(--section-gap);
   margin-top: 1.25rem;
 }
 
@@ -234,12 +283,12 @@ body {
 
 .page-card-content,
 .page-location-card {
-  padding: clamp(1rem, 2vw, 1.5rem);
+  padding: clamp(1rem, 2vw, 2rem);
 }
 
 .page-card h3 {
   margin: 0 0 0.5rem;
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 0.9rem + 0.35vw, 1.5rem);
 }
 
 .page-card-content .page-text-link {
